@@ -16,19 +16,25 @@ void loop() {
     else
       Keyboard.release(32);
   }
+  if(pad.Start_changed()){
+       if( pad.Start() )
+      Keyboard.press(13);
+    else
+      Keyboard.release(13);
+  }
         
   if( pad.A_changed() ){
     if( pad.A() )
-      Keyboard.press(10);
+      Keyboard.press(65);
     else
-      Keyboard.release(10);
+      Keyboard.release(65);
   }
   
   if( pad.B_changed() ){
     if( pad.B() )
-      Keyboard.press(179);
+      Keyboard.press(66);
     else
-      Keyboard.release(179);
+      Keyboard.release(66);
   }
   
   if( pad.Up_changed() ){
@@ -58,4 +64,8 @@ void loop() {
     else
       Keyboard.release(215);
   }
-}
+}   
+
+
+
+
